@@ -10,7 +10,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<!-- custom links -->
 	<link rel="stylesheet" href="styles.css">
-	<script src="javascript/password.js" charset="utf-8"></script>
+	<script src="javascript/password.js"></script>
 	<title>signup</title>
 </head>
 <body>
@@ -78,15 +78,15 @@
 						<label for="psw">Password:</label>
 						<input type="password" class="form-control" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
 						title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+						<div id="message" style="display:none;">
+							<h3>Password must contain the following:</h3>
+							<p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+							<p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+							<p id="number" class="invalid">A <b>number</b></p>
+							<p id="length" class="invalid">Minimum <b>8 characters</b></p>
+						</div>
 						<div class="valid-feedback">Valid.</div>
 						<div class="invalid-feedback">Please fill in your Password.</div>
-					</div>
-					<div id="message">
-						<h3>Password must contain the following:</h3>
-						<p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-						<p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-						<p id="number" class="invalid">A <b>number</b></p>
-						<p id="length" class="invalid">Minimum <b>8 characters</b></p>
 					</div>
 					<!--pasword check -->
 					<div class="form-group col">
