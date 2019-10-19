@@ -37,23 +37,43 @@
 			</li>
 		</ul>
 	</nav>
-  <h2>Login</h2>
+
 	<!--register form-->
-	<form method="post" action="login.php">
+	<h2>Registration</h2>
+	<form method="post" action="register.php">
 		<!--username-->
 		<div class="form-group">
 			<label>Username:</label>
-			<input type="text" name="username" class="form-control">
+			<input type="text" name="username" class="form-control" required>
+		</div>
+		<!--FirstName-->
+		<div class="form-group">
+			<label>firstname</label>
+			<input type="text" name="firstname" class="form-control" required>
+		</div>
+		<!--surname-->
+		<div class="form-group">
+			<label>surname</label>
+			<input type="text" name="surname" class="form-control" required>
+		</div>
+		<!--email-->
+		<div class="form-group">
+			<label>email</label>
+			<input type="email" name="email" class="form-control" required>
 		</div>
 		<!--password-->
 		<div class="form-group">
 			<label>password</label>
-			<input type="password" name="password_1" class="form-control">
+			<input type="password" name="password_1" class="form-control" required>
+		</div>
+		<!--password-->
+		<div class="form-group">
+			<label>repeat password</label>
+			<input type="password" name="password_2" class="form-control" required>
 		</div>
 
-
-		<input type="submit" name="login_user" class="btn btn-primary">
-		<p>not a user? <a href="register.php"><b>register</b></a></p>
+		<input type="submit" name="register_user" class="btn btn-primary">
+		<p>Already a user? <a href="login.php"><b>Login</b></a></p>
 
 </form>
 
