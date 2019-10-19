@@ -1,4 +1,4 @@
-
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -12,7 +12,7 @@
 	<!-- custom links -->
 	<link rel="stylesheet" href="">
 	<script src=""></script>
-	<title>Register</title>
+	<title>login</title>
 </head>
 <body>
 	<div class="Banner"></div>

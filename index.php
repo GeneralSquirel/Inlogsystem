@@ -27,7 +27,7 @@ if (isset($_GET['logout'])) {
  	<!-- custom links -->
  	<link rel="stylesheet" href="">
  	<script src=""></script>
- 	<title>Register</title>
+ 	<title>Home</title>
  </head>
  <body>
  	<div class="Banner"></div>
@@ -48,14 +48,29 @@ if (isset($_GET['logout'])) {
  				<div class="dropdown-menu">
  					<a class="dropdown-item" href="register.php">register</a>
  					<a class="dropdown-item" href="login.php">Login</a>
+          <a class="dropdown-item" href="index.php?logout='1'">Logout</a>
  				</div>
  			</li>
  		</ul>
  	</nav>
+ 	<!--main part of home page-->
+ 	<h2>Home</h2>
+  <?php if (isset($_SESSION['success'])) : ?>
 
- 	<!--register form-->
- 	<h2>Registration</h2>
+    <div class="">
+      <h3>
+        <?php
+        echo $_SESSION['success'];
+        unset($_SESSION['success']);
+        ?>
+      </h3>
+    </div>
+  <?php endif ?>
 
+<!-- if login print info from user -->
+<?php if (isset($_SESSION['username'])): ?>
+  <h3>Welcome<strong><?php echo $_SESSION['username']; ?></strong></h3>
+<?php endif ?>
  <footer class="Footer"></footer>
  </body>
  </html>

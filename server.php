@@ -20,13 +20,13 @@ $surname = mysqli_real_escape_string($db,$_POST['surname']);
 
 $password_1 = mysqli_real_escape_string($db,$_POST['password_1']);
 $password_2 = mysqli_real_escape_string($db,$_POST['password_2']);
-
-if (empty($username)) {array_push($errors,"username is required")};
-if (empty($firstname)) {array_push($errors,"firstname is required")};
-if (empty($surname)) {array_push($errors,"surname is required")};
-if (empty($email)) {array_push($errors,"email is required")};
-if (empty($password_1)) {array_push($errors,"password is required")};
-if ($password_1 != $password_2) {array_push($errors,"passwords must match")};
+//FORM VALIDATION
+if (empty($username)) {array_push($errors,"username is required");}
+if (empty($firstname)) {array_push($errors,"firstname is required");}
+if (empty($surname)) {array_push($errors,"surname is required");}
+if (empty($email)) {array_push($errors,"email is required");}
+if (empty($password_1)) {array_push($errors,"password is required");}
+if ($password_1 != $password_2) {array_push($errors,"passwords must match");}
 
 //check db for copy emails and username
 
@@ -43,7 +43,7 @@ if ($user) {
 //register user if no errors
 
  if (count($errors) === 0 ) {
-   $password = md5($password_1);
+   $password = md5($password_1);//password ecrption
    $query = "INSERT INTO user (username, firstname, surname, email, password )";
 
    mysqli_query($db,$query);

@@ -1,4 +1,4 @@
-
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -41,6 +41,7 @@
 	<!--register form-->
 	<h2>Registration</h2>
 	<form method="post" action="register.php">
+		<?php include('errors.php') ?>
 		<!--username-->
 		<div class="form-group">
 			<label>Username:</label>
